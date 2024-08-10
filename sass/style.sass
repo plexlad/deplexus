@@ -1,0 +1,79 @@
+$background_color: #FFF4C2
+$foreground_color: #9C6137
+$big_font: "Argentum"
+
+@font-face
+  font-family: "Argentum" 
+  src: url("/ArgentumSans-Black.otf")
+
+*
+  color: $foreground_color
+
+a
+  text-decoration: underline
+  padding: 0
+
+body
+  margin: 0
+  padding: 2em
+  background-color: $background_color
+
+header nav 
+  display: flex
+  align-items: center
+  width: 100%
+  justify-content: left
+
+  
+  
+  a
+    font-size: large
+
+  a:hover
+    text-decoration: underline
+
+  >a
+    margin: 0
+    padding-right: 1em
+
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+    
+    li
+      display: inline
+
+    li:not(:last-child)::after
+      content: " /"
+
+img.logo
+  height: 2.5em
+
+div#everything
+  max-width: 40em
+
+div.center-content
+  display: flex
+  justify-content: center
+
+.hero
+  align-items: center
+  display: flex
+  margin: 0
+  padding: 0
+  height: 20em
+  justify-content: space-around
+
+.hero>*>h1, .hero>*>p
+  padding: 0
+  margin: 0
+
+.hero>*>h1
+  font-family: $big_font
+  font-size: 2.5em
+
+div.info p
+  text-indent: 2em
+
+
