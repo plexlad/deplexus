@@ -1,6 +1,7 @@
 $background_color: #FFF4C2
 $foreground_color: #9C6137
 $big_font: "Argentum"
+$normal_font: "IBM Plex Serif"
 
 @font-face
   font-family: "Argentum" 
@@ -8,10 +9,15 @@ $big_font: "Argentum"
 
 *
   color: $foreground_color
+  font-family: $normal_font
+  font-weight: 400
 
 a
   text-decoration: underline
   padding: 0
+
+p a:after
+  content: " →"
 
 body
   margin: 0
@@ -23,18 +29,24 @@ header nav
   align-items: center
   width: 100%
   justify-content: left
-
   
-  
-  a
-    font-size: large
+  a>#logo
+    border: 0.25em solid $foreground_color
+    border-radius: 3em
+    padding: 1em
+    margin: 0
+    position: relative
+    transition: padding 0.5s
 
   a:hover
     text-decoration: underline
 
+    >#logo
+      padding: 1.15em
+
   >a
     margin: 0
-    padding-right: 1em
+    margin-right: 1em
 
   ul
     list-style: none
@@ -56,13 +68,14 @@ div#everything
 div.center-content
   display: flex
   justify-content: center
+  width: auto
 
 .hero
   align-items: center
   display: flex
   margin: 0
   padding: 0
-  height: 20em
+  height: 12em
   justify-content: space-around
 
 .hero>*>h1, .hero>*>p
@@ -72,8 +85,18 @@ div.center-content
 .hero>*>h1
   font-family: $big_font
   font-size: 2.5em
+  letter-spacing: 0
+  transition: letter-spacing 0.7s
+
+.hero>*>h1:hover
+  letter-spacing: 0.1em
 
 div.info p
   text-indent: 2em
 
+footer
+  border-top: 0.1em solid $foreground_color 
 
+  >p
+    text-align: center
+    margin: 1em
